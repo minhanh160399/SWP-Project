@@ -8,7 +8,8 @@ package Model;
  *
  * @author ASUS
  */
-public class Account {
+public class Patient {
+
     private int id;
     private String email;
     private String pass;
@@ -17,25 +18,12 @@ public class Account {
     private String dob;
     private String gender;
     private String address;
-    private String isUser;
-    private String isDoctor;
     private String isAdmin;
 
-    public Account() {
+    public Patient() {
     }
 
-    public Account(String email, String pass, String name, String phone) {
-        this.email = email;
-        this.pass = pass;
-        this.name = name;
-        this.phone = phone;
-
-    }
-
-   
-  
-
-    public Account(int id, String email, String pass, String name, String phone, String dob, String gender, String address, String isUser, String isDoctor, String isAdmin) {
+    public Patient(int id, String email, String pass, String name, String phone, String dob, String gender, String address, String isAdmin) {
         this.id = id;
         this.email = email;
         this.pass = pass;
@@ -44,8 +32,6 @@ public class Account {
         this.dob = dob;
         this.gender = gender;
         this.address = address;
-        this.isUser = isUser;
-        this.isDoctor = isDoctor;
         this.isAdmin = isAdmin;
     }
 
@@ -113,22 +99,6 @@ public class Account {
         this.address = address;
     }
 
-    public String getIsUser() {
-        return isUser;
-    }
-
-    public void setIsUser(String isUser) {
-        this.isUser = isUser;
-    }
-
-    public String getIsDoctor() {
-        return isDoctor;
-    }
-
-    public void setIsDoctor(String isDoctor) {
-        this.isDoctor = isDoctor;
-    }
-
     public String getIsAdmin() {
         return isAdmin;
     }
@@ -139,7 +109,8 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" + "id=" + id + ", email=" + email + ", pass=" + pass + ", name=" + name + ", phone=" + phone + ", dob=" + dob + ", gender=" + gender + ", address=" + address + ", isUser=" + isUser + ", isDoctor=" + isDoctor + ", isAdmin=" + isAdmin + '}';
+        return "Patient{" + "id=" + id + ", email=" + email + ", pass=" + pass + ", name=" + name + ", phone=" + phone + ", dob=" + dob + ", gender=" + gender + ", address=" + address + ", isAdmin=" + isAdmin + '}';
     }
-    
+
+   
 }

@@ -171,7 +171,7 @@
                                             <ul>
                                                 <li><h3 class="fa fa-user-md">  ${i.doctorName}</h3></li> <br>
                                                 <li><h3 class="fas fa-graduation-cap">${i.degree}</h3></li> <br>
-                                                <li><h3 class="fas fa-stethoscope">  ${i.specialization}</h3></li>
+                                           
                                             </ul>
                                         </div>
                                     </div>

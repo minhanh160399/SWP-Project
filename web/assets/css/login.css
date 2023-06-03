@@ -61,7 +61,7 @@ body {
   width: 600px;
   height: 100%;
   padding: 25px;
-  background-color: #ecf0f3;
+  background-color: #f9f9f9;
   transition: 1.25s;
 }
 
@@ -137,7 +137,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1.15px;
-  background-color: #4B70E2;
+  background-color: #38b500a8;
   color: #f9f9f9;
   box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
   border: none;
@@ -167,7 +167,7 @@ body {
   padding: 50px;
   z-index: 200;
   transition: 1.25s;
-  background-color: #ecf0f3;
+  background-color: #f9f9f9;
   overflow: hidden;
   box-shadow: 4px 4px 10px #d1d9e6, -4px -4px 10px #f9f9f9;
 }
@@ -176,7 +176,7 @@ body {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background-color: #ecf0f3;
+  background-color: #c8ffaf;
   box-shadow: inset 8px 8px 12px #d1d9e6, inset -8px -8px 12px #f9f9f9;
   bottom: -60%;
   left: -60%;
@@ -255,26 +255,26 @@ body {
 }
 .text-success {
  
-  color: #4b70e2;
-  /* Thêm các thuộc tính khác tùy chỉnh */
+  color: #38b500;
+  /* ThÃƒÂªm cÃƒÂ¡c thuÃ¡Â»â„¢c tÃƒÂ­nh khÃƒÂ¡c tÃƒÂ¹y chÃ¡Â»â€°nh */
 }
 .button-login {
  width: 180px;
-  height: 50px;
-  border-radius: 25px;
-  margin-top: 50px;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 1.15px;
-  background-color: #4B70E2;
-  color: #f9f9f9;
-  box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
-  border: none;
-  outline: none;
+ height: 50px;
+ border-radius: 25px;
+ margin-top: 50px;
+ font-weight: 700;
+ font-size: 14px;
+ letter-spacing: 1.15px;
+ background-color: #7acc55;
+ color: #f9f9f9;
+ box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
+ border: none;
+ outline: none;
 }
 
 .button-login:hover {
-  background-color: #3553b8;
+  background-color: #38b500;
 }
 
 .button-login:focus {
@@ -282,5 +282,5 @@ body {
 }
 
 .button-login:active {
-  background-color: #293f8e;
+  background-color: #38b500;
 }

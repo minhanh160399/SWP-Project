@@ -100,7 +100,7 @@
                                                 <ul class="submenu">
                                                     <li><a href="dang-xuat">Đăng xuất</a></li>
                                                    
-                                                    <li><a href="chinh-sua?bnid=${sessionScope.acc.id}">Trang cá nhân </a></li>
+                                                    <li><a href="chinh-sua?=${sessionScope.acc.id}">Trang cá nhân </a></li>
                                                     
                                                 </ul>
                                             </li>
@@ -353,7 +353,7 @@
                                         <div class="blog-cap">
                                             <h3 class="doctor-name">1</h3>
                                             <div class="degree">${i.degree}</div>
-                                            <p class="specialization">${i.specialization}</p>
+
 
 
                                             <li>

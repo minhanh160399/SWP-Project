@@ -5,8 +5,8 @@
 package Control;
 
 import DAO.LoginDAO;
-import DAO.dao;
-import Model.Account;
+import Model.Bacsi;
+import Model.Patient;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,32 +20,33 @@ import java.io.IOException;
  */
 public class login extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             String email = request.getParameter("email");
             String pass = request.getParameter("pass");
             LoginDAO DAO = new LoginDAO();
-            Account a = DAO.login(email, pass);
-             if (a == null) {
+            Patient a = DAO.loginPatient(email, pass);
+            Bacsi b = DAO.loginDoctor(email, pass);
+            boolean hasError = (a == null && b == null); // Biến kiểm tra lỗi
+
+            if (hasError) {
                 request.setAttribute("mess", "Sai email hoặc mật khẩu!");
                 request.getRequestDispatcher("Login.jsp").forward(request, response);
             } else {
                 HttpSession session = request.getSession();
-                session.setAttribute("acc", a);
-                session.setMaxInactiveInterval(108000);            
-               response.sendRedirect("trang-chu");
+                if (a != null) {
+                    session.setAttribute("acc", a);
+                    session.setMaxInactiveInterval(108000);
+                    response.sendRedirect("trang-chu");
+                } else  {
+                    session.setAttribute("acc", b);
+                    session.setMaxInactiveInterval(108000);
+                    response.sendRedirect("trang-chu");
+                }
             }
         } catch (Exception e) {
+            // Xử lý exception nếu cần
         }
     }
 

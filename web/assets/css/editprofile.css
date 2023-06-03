@@ -1,0 +1,112 @@
+body {
+    background: #e9f9e7;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+}
+
+#links a {
+  text-decoration: none;
+  color: #888888;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+  position: relative;
+  transition: color 0.3s ease;
+  padding-left: 25px
+}
+
+#links a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(136, 136, 136, 0.2);
+  filter: blur(2px);
+}
+
+#links a:last-child {
+  border-bottom: none;
+}
+
+#links a:hover {
+  color: #000000;
+}
+
+#links a:hover::before {
+  background-color: transparent;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(95, 173, 61);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: rgb(95, 173, 61);
+}
+
+.profile-button:focus {
+    background: rgb(95, 173, 61);
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: rgb(95, 173, 61);
+    box-shadow: none
+}
+.btn {
+       background: rgb(42, 120, 39);
+ 
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+.button-container {
+
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+ 
+}
+
+.button-container span {
+  margin-right: 20px;
+}
+
+.button-container button {
+  margin-right: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}

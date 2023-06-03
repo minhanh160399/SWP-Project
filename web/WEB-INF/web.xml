@@ -48,6 +48,14 @@
         <servlet-name>forgotPass</servlet-name>
         <servlet-class>Control.forgotPass</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Matkhaumoi</servlet-name>
+        <servlet-class>Control.Matkhaumoi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>datlich</servlet-name>
+        <servlet-class>Control.datlich</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>showDoctor</servlet-name>
         <url-pattern>/trang-chu</url-pattern>
@@ -95,6 +103,14 @@
     <servlet-mapping>
         <servlet-name>forgotPass</servlet-name>
         <url-pattern>/quen-mat-khau</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Matkhaumoi</servlet-name>
+        <url-pattern>/mat-khau-moi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>datlich</servlet-name>
+        <url-pattern>/dat-lich</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

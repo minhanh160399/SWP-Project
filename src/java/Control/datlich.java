@@ -4,21 +4,21 @@
  */
 package Control;
 
-import DAO.LoginDAO;
-
-import Model.Patient;
+import DAO.dao;
+import Model.Bacsi;
+import Model.Lichlamviec;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import static org.apache.coyote.http11.Constants.a;
+import java.util.List;
 
 /**
  *
  * @author ASUS
  */
-public class signup extends HttpServlet {
+public class datlich extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,37 +33,16 @@ public class signup extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try {
-            String email = request.getParameter("email");
-            String pass = request.getParameter("pass");
-            String name = request.getParameter("name");
-            String confirmpass = request.getParameter("confirm");
-            String phone = request.getParameter("phone");
-            String dob = request.getParameter("dob");
-            boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
-            String address = request.getParameter("address");
-            String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,16}$";
-            if (!pass.matches(passwordRegex)) {
-                request.setAttribute("mess0", "Mật khẩu phải có 8-16 kí tự, bao gồm ít nhất một chữ hoa, một chữ thường và một số!");
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
-            } else if (!pass.equals(confirmpass)) {
-                request.setAttribute("mess1", "Mật khẩu không trùng khớp!");
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
-            } else {
-                LoginDAO DAO = new LoginDAO();
-                Patient a = DAO.checkAccountExist(email);
-                if (a == null) {
-                    DAO.signup(email, pass, name, phone, dob, gender, address);
-                    request.setAttribute("mess2", "Tạo tài khoản thành công!");
-                    request.getRequestDispatcher("Login.jsp").forward(request, response);
-                } else {
-                    request.setAttribute("mess3", "Email đã tồn tại!");
-                    request.getRequestDispatcher("Login.jsp").forward(request, response);
-                }
-            }
+            String lid = request.getParameter("lid");
+            dao DAO =  new dao();
+            Bacsi listb = DAO.getDoctorbyID(lid);
+            List<Lichlamviec> lich = DAO.getDoctorWorkSchedule(lid);
+            request.setAttribute("showlich", listb);
+            request.setAttribute("lich", lich);
+            request.getRequestDispatcher("Datlich.jsp").forward(request, response);
         } catch (Exception e) {
-
         }
-    }
+           }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -19,15 +19,17 @@
     <body>
         <div class="main">
             <div class="container a-container" id="a-container">
-                <form class="form" id="forgot-password-form" action="quen-mat-khau" method="post">
+                <form class="form" id="forgot-password-form" action="mat-khau-moi" method="post">
                     <!-- Nội dung form "Quên mật khẩu" -->
-                    <h2 class="form_title title">Quên mật khẩu</h2>
-                    <p class="text-danger">${mess0}</p><br>
-                   
-                    <input class="form__input" type="email" placeholder="Email" name="email">
+                    <h2 class="form_title title">Mật khẩu mới</h2>
+
+                    <p class="text-danger">${mess4}</p><br>
+                    <p class="text-danger">${mess5}</p><br>
+                    <input class="form__input" type="password" placeholder="Nhập mật khẩu mới" name="newpass">
+                    <input class="form__input" type="password" placeholder="Xác nhận mật khẩu" name="confPassword">
                     <button class="button-login" id="forgot-password-btn">Xác nhận</button>
                 </form>
-                
+
             </div>
             <div class="switch" id="switch-cnt">
                 <div class="switch__circle"></div>

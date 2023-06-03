@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!doctype html>
+
 <html class="no-js" lang="zxx">
     <head>
         <meta charset="utf-8">

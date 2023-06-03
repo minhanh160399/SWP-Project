@@ -163,6 +163,7 @@
                 <div class="row">
 
                     <c:forEach items="${showalldoctor}" var="i">
+
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="doctor-card">
                                 <div class="blog-img-cap">
@@ -174,19 +175,24 @@
                                         </div>
                                     </div>
                                     <div class="blog-cap">
-                                        <h3 class="doctor-name">1</h3>
+                                        <h3 class="doctor-name">${i.name}</h3>
                                         <div class="degree">${i.degree}</div>
-                                        <p class="specialization">${i.specialization}</p>
+
 
                                         <button class="btn appointment-button">
                                             <i class="fas fa-calendar-alt" style="color: white;"></i>
-                                            <span>Đặt khám</span>
+                                            <span>
+                                                <a href=dat-lich?lid=${i.doctorID}>
+                                                    Đặt khám
+                                                </a>
+                                            </span>
                                         </button>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </c:forEach>
                 </div>
 
@@ -212,9 +218,9 @@
                                         </div>
                                     </div>
                                     <div class="blog-cap">
-                                        <h3 class="doctor-name">1</h3>
+                                        <h3 class="doctor-name">${i.name}</h3>
                                         <div class="degree">${i.degree}</div>
-                                        <p class="specialization">${i.specialization}</p>
+
                                         <button class="appointment-button">Đặt khám</button>
                                     </div>
                                 </div>
@@ -240,9 +246,11 @@
                                         </div>
                                     </div>
                                     <div class="blog-cap">
-                                        <h3 class="doctor-name">1</h3>
+                                        <h3 class="doctor-name">${i.name}</h3>
                                         <div class="degree">${i.degree}</div>
-                                        <p class="specialization">${i.specialization}</p>
+                                        <p class="specialization">
+                                        
+                                        </p>
                                         <button class="appointment-button">Đặt khám</button>
                                     </div>
                                 </div>

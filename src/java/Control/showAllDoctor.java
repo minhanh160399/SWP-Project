@@ -5,6 +5,7 @@
 package Control;
 
 import DAO.dao;
+import Model.Patient;
 import Model.Bacsi;
 import Model.Chuyenkhoa;
 import jakarta.servlet.ServletException;
@@ -30,8 +31,10 @@ public class showAllDoctor extends HttpServlet {
            
             List<Bacsi> showall = DAO.getAll();
            List<Chuyenkhoa> showspecialty = DAO.getSpecialty();
+
             request.setAttribute("showalldoctor", showall);
             request.setAttribute("showlistc", showspecialty);
+      
             request.getRequestDispatcher("Bacsifull.jsp").forward(request, response);
         } catch (Exception e) {
         }
